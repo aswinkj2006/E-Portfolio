@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://icons.iconarchive.com/icons/gartoon-team/gartoon-action/128/help-about-star-fav-icon.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet">
@@ -40,9 +41,9 @@
 
   <!-- About Scroll Section -->
   <section class="about-section" id="about">
-    <div class="about glass">
-      <h2>Hello Again 👋</h2>
-      <p>I'm a 19 year old Tech Enthusiast currently pursuing B.Tech at SNS College of Technology, Coimbatore.</p>
+    <div class="about">
+      <h2> Who am I? </h2>
+      <p>I'm just an AIML student with a frontend mindset, skilled in full stack development and UI/UX design (Figma, Flutterflow). Currently exploring Data Science and Machine Learning through projects and internships. Proficient in Python, SQL, and modern AI tools (ChatGPT, Perplexity), with a passion for building intelligent, user-friendly solutions.</p>
       <div class="links">
         <a href="https://linkedin.com/in/aswinkj2006" target="_blank" class="btn">LinkedIn</a>
         <a href="https://github.com/aswinkj2006" target="_blank" class="btn">GitHub</a>
@@ -55,17 +56,18 @@
   <!-- Contact -->
   <section class="contact glass" id="contact">
     <h2>Get in Touch</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
+    <form class="contact-form" id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit" class="btn">Send</button>
     </form>
+    <p id="status"></p>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 Aswin K J. Built with HTML & CSS.</p>
+    <p>&copy; 2025 Aswin K J. Built with HTML, CSS & JS.</p>
   </footer>
 
   <script src="https://unpkg.com/scrollreveal"></script>
@@ -108,6 +110,27 @@
 
   setInterval(changeWord, 2000); // change every 2s
 </script>
+<!--Email Integration-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("w1T0X2nNp2hZMxJP1"); // Replace with your Public Key
+   })();
+</script>
+<!--Email Status Updater-->
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('eportfolio', 'eptemplate', this)
+      .then(function() {
+        document.getElementById('status').innerText = "Message sent successfully!";
+      }, function(error) {
+        document.getElementById('status').innerText = "Failed to send message: " + JSON.stringify(error);
+      });
+  });
+</script>
+
 
 </body>
 </html>
