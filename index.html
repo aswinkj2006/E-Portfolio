@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet">
   <title>Aswin K J | Portfolio</title>
 </head>
 <body>
   <!-- Top Navigation -->
 <nav class="navbar glass">
-  <div class="nav-logo" style="color: rgb(94, 177, 251);">E-Portfolio</div>
+  <div class="nav-logo" style="color: #b3c9ff; font-family: 'Product Sans Black', sans-serif;">E-Portfolio</div>
   <div class="hamburger">☰</div>
   <ul class="nav-links" id="nav-links">
     <li><a href="acad.html">Academics</a></li>
@@ -25,11 +26,14 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-left">
-      <img src="1.jpg" alt="Aswin" class="hero-img" />
+      <img src="12.jpg" alt="Aswin" class="hero-img" />
     </div>
     <div class="hero-right">
-      <h1>Hi, I'm <span class="highlight">Aswin K J</span></h1>
-      <p>Welcome to my digital space.</p>
+      <h3>Hi, I am</h3>
+      <h1>Aswin K J</h1>
+      <div class="maker-line">
+        and I'm a <span class="rotator-wrapper"><span id="rotating-word">Data Scientist</span></span>
+      </div>
       <a href="#about" class="scroll-btn">↓ Scroll to know me</a>
     </div>
   </section>
@@ -77,5 +81,33 @@
     document.getElementById("nav-links").classList.toggle("active");
   }
 </script>
+<!-- Rotate Words -->
+<script>
+  const words = ["Data Scientist", "Data Analyst", "Web Developer", "Design Thinker", "Vibe Coder", "Tech Enthusiast", "Leader"];
+  let index = 0;
+  const rotatingWord = document.getElementById("rotating-word");
+
+  function changeWord() {
+    // Slide up
+    rotatingWord.style.transform = "translateY(-100%)";
+
+    setTimeout(() => {
+      index = (index + 1) % words.length;
+      rotatingWord.textContent = words[index];
+
+      // Reset position below, then slide in
+      rotatingWord.style.transition = "none";
+      rotatingWord.style.transform = "translateY(100%)";
+
+      requestAnimationFrame(() => {
+        rotatingWord.style.transition = "transform 0.6s ease";
+        rotatingWord.style.transform = "translateY(0)";
+      });
+    }, 600); // matches CSS transition time
+  }
+
+  setInterval(changeWord, 2000); // change every 2s
+</script>
+
 </body>
 </html>
