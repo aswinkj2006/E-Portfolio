@@ -518,15 +518,25 @@ ul.accordion-list strong {
   display: flex;
   height: 100vh;
   align-items: center;
-  padding: 0 5%;
+  padding: 80px 5% 0; /* Added top padding for navbar offset */
 }
 
 .hero-left, .hero-right {
-  flex: 1;
+  flex: 1; /* Stops jitter when text changes width */
+}
+
+.hero-left {
+  display: flex;
+  justify-content: flex-end; /* Push image to the right edge of its 50% half */
+  padding-right: 40px;
 }
 
 .hero-right {
-  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 40px;
   text-align: left;
 }
 
@@ -597,6 +607,7 @@ ul.accordion-list strong {
   box-shadow: 0 20px 40px rgba(0,0,0,0.5);
   overflow: hidden;
   margin: 0 auto;
+  max-width: 400px; /* Constrain the wrapper */
 }
 
 .hero-img-wrapper::after {
@@ -616,7 +627,7 @@ ul.accordion-list strong {
 
 .hero-img {
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
   border-radius: 20px;
   filter: grayscale(100%);
   display: block;
