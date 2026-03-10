@@ -516,7 +516,7 @@ ul.accordion-list strong {
 /* Hero Section Specifics */
 .hero {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
   padding: 80px 5% 0; /* Added top padding for navbar offset */
 }
@@ -779,14 +779,22 @@ ul.accordion-list strong {
     flex-direction: column-reverse;
     justify-content: center;
     text-align: center;
-    padding-top: 80px;
+    padding-top: 100px;
+    padding-bottom: 40px;
   }
   
   .hero-right {
     text-align: center;
     padding: 20px;
+    align-items: center;
   }
   
+  .hero-left {
+    padding-right: 0;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
   .hero-right h1 {
     font-size: 3.5rem;
   }
@@ -828,11 +836,119 @@ ul.accordion-list strong {
     display: flex;
   }
   
+  .contact-info-panel h3 {
+    text-align: center;
+  }
+  
+  .contact-details {
+    align-items: center;
+  }
+
+  .contact-item {
+    word-break: break-word;
+    text-align: center;
+  }
+
   .about-section {
-    padding: 100px 15px 40px;
+    padding: 80px 15px 30px;
   }
   
   .about {
-    padding: 20px;
+    padding: 15px;
+  }
+  
+  .about h2, .accordion-title {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .stats-row {
+    gap: 20px !important;
+    padding: 25px 15px !important;
+  }
+  
+  .stat-item h2 {
+    font-size: 2rem !important;
+  }
+  
+  .projects-grid, .cert-grid, .leadership-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .skill-category {
+    flex: 1 1 100%;
+  }
+  
+  .hero-img {
+    max-width: 300px;
+  }
+  .hero-img-wrapper {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo {
+    font-size: 1.3rem;
+  }
+  
+  .hero-right h1 {
+    font-size: 2.8rem;
+  }
+  
+  .hero-right h3 {
+    font-size: 1.2rem;
+  }
+  
+  .maker-line {
+    font-size: 1.2rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem !important;
+  }
+  
+  .about h2, .accordion-title {
+    font-size: 1.8rem;
+  }
+  
+  .timeline-item {
+    padding-left: 30px;
+    padding-right: 0;
+  }
+
+  .timeline::after {
+    left: 8px;
+  }
+
+  .timeline-item::after {
+    left: 0;
+    width: 14px;
+    height: 14px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .stat-item h2 {
+    font-size: 1.8rem !important;
+  }
+  
+  .contact-container {
+    padding: 30px 20px;
+  }
+  
+  .contact-info-panel h3 {
+    font-size: 1.6rem;
+  }
+  
+  .timeline-title {
+    font-size: 1.15rem;
+  }
+  
+  .project-title, .cert-title {
+    font-size: 1.1rem;
   }
 }
