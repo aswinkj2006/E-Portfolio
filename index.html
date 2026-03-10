@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="https://icons.iconarchive.com/icons/gartoon-team/gartoon-action/128/help-about-star-fav-icon.png" type="image/x-icon">
+  <meta name="description"
+    content="Aswin K J - Data Scientist and Web Developer Portfolio. Showcasing AI/ML projects, full-stack development, and data analysis." />
+  <meta property="og:title" content="Aswin K J | Portfolio" />
+  <meta property="og:description"
+    content="View the interactive portfolio of Aswin K J, featuring projects in Machine Learning, Web Development, and Data Science." />
+  <meta property="og:type" content="website" />
+  <link rel="icon"
+    href="https://icons.iconarchive.com/icons/gartoon-team/gartoon-action/128/help-about-star-fav-icon.png"
+    type="image/x-icon">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
   <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <title>Aswin K J | Portfolio</title>
 </head>
+
 <body>
   <!-- Top Navigation -->
-<nav class="navbar glass">
-  <div class="nav-logo" style="color: #b3c9ff; font-family: 'Product Sans Black', sans-serif;">E-Portfolio</div>
-  <div class="hamburger">☰</div>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="acad.html">Academics</a></li>
-    <li><a href="ski.html">Skills</a></li>
-    <li><a href="cert.html">Certifications</a></li>
-    <li><a href="we.html">Experiences</a></li>
-    <li><a href="pro.html">Projects</a></li>
-  </ul>
-</nav>
+  <nav class="navbar glass" id="navbar">
+    <div class="nav-logo">&lt; Aswin /&gt;</div>
+    <div class="hamburger">☰</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#academics" class="nav-link">Academics</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#certifications" class="nav-link">Certifications</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
 
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-left">
-      <img src="12.jpg" alt="Aswin" class="hero-img" />
+      <div class="hero-img-wrapper">
+        <img src="12.jpg" alt="Aswin K J" class="hero-img" />
+      </div>
     </div>
     <div class="hero-right">
       <h3>Hi, I am</h3>
@@ -35,7 +50,13 @@
       <div class="maker-line">
         and I'm a <span class="rotator-wrapper"><span id="rotating-word">Data Scientist</span></span>
       </div>
-      <a href="#about" class="scroll-btn">↓ Scroll to know me</a>
+      <div class="hero-socials">
+        <a href="https://linkedin.com/in/aswinkj2006" target="_blank" class="social-icon"><i
+            class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/aswinkj2006" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+        <a href="https://leetcode.com/" target="_blank" class="social-icon"><i class="fas fa-code"></i></a>
+      </div>
+      <a href="#projects" class="btn">View My Projects</a>
     </div>
   </section>
 
@@ -43,94 +64,507 @@
   <section class="about-section" id="about">
     <div class="about">
       <h2> Who am I? </h2>
-      <p>I'm just an AIML student with a frontend mindset, skilled in full stack development and UI/UX design (Figma, Flutterflow). Currently exploring Data Science and Machine Learning through projects and internships. Proficient in Python, SQL, and modern AI tools (ChatGPT, Perplexity), with a passion for building intelligent, user-friendly solutions.</p>
+      <p class="bio-text">Final-year B.Tech student in AI/ML (CGPA 9.1), building production-ready web apps and ML
+        models. 2x internship experience. Project portfolio spanning computer vision, NLP, and full-stack development.
+        Skilled in Python, React, and building user-friendly solutions.</p>
       <div class="links">
         <a href="https://linkedin.com/in/aswinkj2006" target="_blank" class="btn">LinkedIn</a>
         <a href="https://github.com/aswinkj2006" target="_blank" class="btn">GitHub</a>
         <a href="#contact" class="btn">Contact</a>
-        <a href="Aswin's Resume.pdf"class="btn" download> Resume</a>
+        <a href="Aswin_KJ_Resume.pdf" class="btn" download> Resume</a>
+      </div>
+
+      <!-- Stats Row Moved Here -->
+      <div class="stats-row"
+        style="display: flex; justify-content: center; gap: 40px; padding: 40px 20px; flex-wrap: wrap; margin-top: 50px; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; box-shadow: var(--card-shadow);">
+        <div class="stat-item" style="text-align: center;">
+          <h2
+            style="color: var(--accent-cyan); font-size: 2.5rem; font-family: var(--font-heading); margin-bottom: 5px;">
+            9.1</h2>
+          <p
+            style="color: var(--text-secondary); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; margin: 0;">
+            CGPA</p>
+        </div>
+        <div class="stat-item" style="text-align: center;">
+          <h2
+            style="color: var(--accent-cyan); font-size: 2.5rem; font-family: var(--font-heading); margin-bottom: 5px;">
+            10+</h2>
+          <p
+            style="color: var(--text-secondary); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; margin: 0;">
+            Projects</p>
+        </div>
+        <div class="stat-item" style="text-align: center;">
+          <h2
+            style="color: var(--accent-cyan); font-size: 2.5rem; font-family: var(--font-heading); margin-bottom: 5px;">
+            2</h2>
+          <p
+            style="color: var(--text-secondary); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; margin: 0;">
+            Internships</p>
+        </div>
+        <div class="stat-item" style="text-align: center;">
+          <h2
+            style="color: var(--accent-cyan); font-size: 2.5rem; font-family: var(--font-heading); margin-bottom: 5px;">
+            5+</h2>
+          <p
+            style="color: var(--text-secondary); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; margin: 0;">
+            Languages/Tools</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academics Section -->
+  <section class="about-section" id="academics">
+    <div class="about">
+      <h2 class="accordion-title">Academic Background</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3 class="timeline-title">B.Tech in Artificial Intelligence & Machine Learning</h3>
+            <div class="timeline-subtitle">SNS College of Technology, Coimbatore</div>
+            <p class="timeline-text">2022 - Present | <strong>CGPA: 9.1</strong></p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3 class="timeline-title">Higher Secondary Education</h3>
+            <div class="timeline-subtitle">The Oxford School</div>
+            <p class="timeline-text">2020 - 2022 | <strong>Percentage: 89%</strong></p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3 class="timeline-title">Secondary Education</h3>
+            <div class="timeline-subtitle">Chinmaya Vidyalaya</div>
+            <p class="timeline-text">2008 - 2020 | <strong>Percentage: 95%</strong></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience Section -->
+  <section class="about-section" id="experience">
+    <div class="about">
+      <h2 class="accordion-title">Work Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3 class="timeline-title">Intern - Data Analyst/Data Scientist</h3>
+            <div class="timeline-subtitle">Labmentix Edtech Pvt. Ltd | July 2024 – December 2024</div>
+            <p class="timeline-text">Developing innovative data-driven solutions via exploratory data analysis and
+              prediction models.</p>
+            <div class="timeline-links">
+              <a href="https://drive.google.com/file/d/1HZh-ewWEDzFmKfXYRd9CA8M0_fRnYcg5/view?usp=sharing"
+                target="_blank">📄 Offer Letter</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3 class="timeline-title">Intern - Full Stack Web Developer</h3>
+            <div class="timeline-subtitle">Pantech Organisation | November 2024 – February 2025</div>
+            <p class="timeline-text">Developed web applications using React.js and Node.js, collaborated on backend
+              development, and integrated databases.</p>
+            <div class="timeline-links">
+              <a href="https://drive.google.com/file/d/1vtN9AHMvK9YY1uMWJfv5POx0-R3u_klc/view?usp=sharing"
+                target="_blank">📄 Offer Letter</a>
+              <a href="https://my-certificates.com/certificates/68a2c14af0cf864b6a801f64" target="_blank">🏆 Completion
+                Letter</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Page Content -->
+  <section class="about-section" id="skills">
+    <div class="about">
+      <h2 class="accordion-title">Skills & Languages</h2>
+      <div class="skills-grid">
+
+        <div class="skill-category">
+          <h3>Programming</h3>
+          <div class="skill-chips">
+            <span class="chip">Python</span>
+            <span class="chip">C</span>
+            <span class="chip">Java</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Data Science / ML</h3>
+          <div class="skill-chips">
+            <span class="chip">scikit-learn</span>
+            <span class="chip">TensorFlow</span>
+            <span class="chip">Pandas</span>
+            <span class="chip">NumPy</span>
+            <span class="chip">Streamlit</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Web Development</h3>
+          <div class="skill-chips">
+            <span class="chip">HTML/CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">React.js</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">Flask</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Tools & DBs</h3>
+          <div class="skill-chips">
+            <span class="chip">Git / GitHub</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">MongoDB</span>
+            <span class="chip">Supabase</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="about-section" id="projects">
+    <div class="about">
+      <h2 class="accordion-title">Projects</h2>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Local Food Waste Management</h3>
+            <p class="project-desc">Interactive web app to manage surplus food distribution connecting donors and
+              receivers.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">SQL</span>
+            </div>
+            <div class="project-links">
+              <a href="https://nbviewer.org/github/aswinkj2006/Local-Food-Waste-Management/blob/main/Local_Food_Waste_Management.ipynbS"
+                target="_blank" class="project-link">View Project ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Fish Image Classification</h3>
+            <p class="project-desc">Image Classification training custom CNN & transfer learning (VGG16, ResNet50,
+              MobileNetV2).</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Deep Learning</span>
+            </div>
+            <div class="project-links">
+              <a href="https://nbviewer.org/github/aswinkj2006/Fish-Image-Classification/blob/master/Fish%20Image%20Classification%20Aswin%20K%20J.ipynb"
+                target="_blank" class="project-link">View Project ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Shopper Spectrum</h3>
+            <p class="project-desc">RFM Analysis on Customer Data with prediction models and interactive graphs.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Data Analysis</span>
+            </div>
+            <div class="project-links">
+              <a href="https://nbviewer.org/github/aswinkj2006/Shopper-Spectrum/blob/main/Shopper%20Spectrum%20Project.ipynb"
+                target="_blank" class="project-link">View Project ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Brain Tumour Classification</h3>
+            <p class="project-desc">Image Classification training custom CNN model and transfer learning models.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Computer Vision</span>
+            </div>
+            <div class="project-links">
+              <a href="https://nbviewer.org/github/aswinkj2006/Brain-Tumour-Classification/blob/main/Brain_Tumour_Classification_Aswin_K_J.ipynb"
+                target="_blank" class="project-link">View Project ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Greenify</h3>
+            <p class="project-desc">Gamified environmental action platform with maps and leaderboards.</p>
+            <div class="project-tech">
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">Bolt.AI</span>
+            </div>
+            <div class="project-links">
+              <a href="https://devpost.com/software/greenify-b0c3xi" target="_blank" class="project-link">Devfolio ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Placify</h3>
+            <p class="project-desc">AI-powered portal connecting students to companies based on domain interest/CGPA.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">JS</span>
+              <span class="tech-tag">Firebase</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/aswinkj2006/Placify" class="project-link" target="_blank">View Project ↗</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section class="about-section" id="certifications">
+    <div class="about">
+      <h2 class="accordion-title">Certifications</h2>
+
+      <div class="cert-grid">
+
+        <div class="cert-card">
+          <h3 class="cert-title">AI to be Aware</h3>
+          <p class="cert-issuer">Skill India (NCVET)</p>
+          <p class="cert-date">August 2025</p>
+          <a href="https://drive.google.com/file/d/1EA5juxkv7QhSCvCl-i7CN56ffquGPGpX/view?usp=sharing" target="_blank"
+            class="cert-link">View Certificate ↗</a>
+        </div>
+
+        <div class="cert-card">
+          <h3 class="cert-title">Data Visualisation Job Simulation</h3>
+          <p class="cert-issuer">Tata (Forage)</p>
+          <p class="cert-date">August 2025</p>
+          <a href="https://drive.google.com/file/d/1KFCTVHfWc0dn5QSOM3iaYUt--w3-5XQS/view?usp=sharing" target="_blank"
+            class="cert-link">View Certificate ↗</a>
+        </div>
+
+        <div class="cert-card">
+          <h3 class="cert-title">Technology Job Simulation</h3>
+          <p class="cert-issuer">Deloitte AUS (Forage)</p>
+          <p class="cert-date">July 2025</p>
+          <a href="https://drive.google.com/file/d/1XWKY8WUUnv3QIbWc0vp3UvlP_eKoTAtz/view?usp=sharing" target="_blank"
+            class="cert-link">View Certificate ↗</a>
+        </div>
+
+        <div class="cert-card">
+          <h3 class="cert-title">Gen AI Workshop</h3>
+          <p class="cert-issuer">NIT Trichy (Techgyan)</p>
+          <p class="cert-date">March 2025</p>
+          <a href="https://drive.google.com/file/d/16tuQJqAD7oskLFAkM5WUGXufSsiK7XqF/view?usp=drive_link"
+            target="_blank" class="cert-link">View Certificate ↗</a>
+        </div>
+
+        <div class="cert-card">
+          <h3 class="cert-title">Tech Symposium / Paper Presentation</h3>
+          <p class="cert-issuer">Coimbatore Institute of Technology</p>
+          <p class="cert-date">February 2025</p>
+          <a href="https://drive.google.com/file/d/1hKNn8i9uy5--b-ul-vnSzeZRSP1xKIXN/view?usp=drive_link"
+            target="_blank" class="cert-link">View Certificate ↗</a>
+        </div>
+
+        <div class="cert-card">
+          <h3 class="cert-title">AI for Entrepreneurship</h3>
+          <p class="cert-issuer">Intel</p>
+          <p class="cert-date">December 2022</p>
+          <a href="https://drive.google.com/file/d/1e8G-Ck4neYRk5y7uIgu5gMArdBATXTMH/view?usp=sharing" target="_blank"
+            class="cert-link">View Certificate ↗</a>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section class="contact glass2" id="contact">
-    <h2>Get in Touch</h2>
-    <form class="contact-form" id="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send</button>
-    </form>
-    <p id="status"></p>
+  <section class="about-section" id="contact">
+    <div class="about">
+      <h2 class="accordion-title">Get in Touch</h2>
+      <div class="contact-container">
+        <div class="contact-info-panel">
+          <h3>Let's work together!</h3>
+          <p class="bio-text" style="text-align: left; margin-bottom: 30px;">I'm currently looking for full-time
+            opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+          <div class="contact-details">
+            <a href="mailto:aswin.kj2006@gmail.com" class="contact-item"><i class="fas fa-envelope"></i>
+              aswin.kj2006@gmail.com</a>
+            <a href="https://linkedin.com/in/aswinkj2006" target="_blank" class="contact-item"><i
+                class="fab fa-linkedin"></i> linkedin.com/in/aswinkj2006</a>
+            <a href="https://github.com/aswinkj2006" target="_blank" class="contact-item"><i class="fab fa-github"></i>
+              github.com/aswinkj2006</a>
+          </div>
+        </div>
+        <div class="contact-form-panel">
+          <form class="contact-form" id="contact-form">
+            <div class="input-group">
+              <input type="text" name="name" placeholder="Name" required />
+            </div>
+            <div class="input-group">
+              <input type="email" name="email" placeholder="Email Address" required />
+            </div>
+            <div class="input-group">
+              <textarea name="message" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn" style="margin-top: 10px;">Send Message <i
+                class="fas fa-paper-plane"></i></button>
+          </form>
+          <p id="status"></p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 Aswin K J. Built with HTML, CSS & JS.</p>
+    <p>&copy; <span id="copyright-year"></span> Aswin K J.</p>
   </footer>
 
   <script src="https://unpkg.com/scrollreveal"></script>
-<script>
-  ScrollReveal().reveal('.hero-left', { delay: 200, distance: '50px', origin: 'left' });
-  ScrollReveal().reveal('.hero-right', { delay: 300, distance: '50px', origin: 'right' });
-  ScrollReveal().reveal('.hero-down', { delay: 300, distance: '50px', origin: 'right' });
-  ScrollReveal().reveal('.about', { delay: 400, distance: '30px', origin: 'bottom' });
-  ScrollReveal().reveal('.contact', { delay: 400, distance: '30px', origin: 'bottom' });
-</script>
-<script>
-  function toggleMenu() {
-    document.getElementById("nav-links").classList.toggle("active");
-  }
-</script>
-<!-- Rotate Words -->
-<script>
-  const words = ["Data Scientist", "Data Analyst", "Web Developer", "Design Thinker", "Vibe Coder", "Tech Enthusiast", "Leader"];
-  let index = 0;
-  const rotatingWord = document.getElementById("rotating-word");
+  <script>
+    ScrollReveal().reveal('.hero-left', { delay: 200, distance: '50px', origin: 'left' });
+    ScrollReveal().reveal('.hero-right', { delay: 300, distance: '50px', origin: 'right' });
+    ScrollReveal().reveal('.hero-down', { delay: 300, distance: '50px', origin: 'right' });
+    ScrollReveal().reveal('.about', { delay: 400, distance: '30px', origin: 'bottom' });
+    ScrollReveal().reveal('.contact', { delay: 400, distance: '30px', origin: 'bottom' });
+  </script>
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("active");
+    }
 
-  function changeWord() {
-    // Slide up
-    rotatingWord.style.transform = "translateY(-100%)";
-
-    setTimeout(() => {
-      index = (index + 1) % words.length;
-      rotatingWord.textContent = words[index];
-
-      // Reset position below, then slide in
-      rotatingWord.style.transition = "none";
-      rotatingWord.style.transform = "translateY(100%)";
-
-      requestAnimationFrame(() => {
-        rotatingWord.style.transition = "transform 0.6s ease";
-        rotatingWord.style.transform = "translateY(0)";
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+        // Close menu on mobile after click
+        if (window.innerWidth <= 768) {
+          document.getElementById("nav-links").classList.remove("active");
+        }
       });
-    }, 600); // matches CSS transition time
-  }
+    });
 
-  setInterval(changeWord, 2000); // change every 2s
-</script>
-<!--Email Integration-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("w1T0X2nNp2hZMxJP1"); // Replace with your Public Key
-   })();
-</script>
-<!--Email Status Updater-->
-<script>
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+    // Auto update copyright year
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
 
-    emailjs.sendForm('eportfolio', 'eptemplate', this)
-      .then(function() {
-        document.getElementById('status').innerText = "Message sent successfully!";
-      }, function(error) {
-        document.getElementById('status').innerText = "Failed to send message: " + JSON.stringify(error);
+    // Intersection Observer for active nav links
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.3 // Trigger when 30% of the section is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('active');
+            }
+          });
+        }
       });
-  });
-</script>
+    }, observerOptions);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    // Dynamic Navbar Background on Scroll
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+  <!-- Rotate Words -->
+  <script>
+    const words = ["Data Scientist", "Data Analyst", "Web Developer", "Design Thinker", "Tech Enthusiast", "Leader"];
+    let index = 0;
+    const rotatingWord = document.getElementById("rotating-word");
+
+    function changeWord() {
+      // Slide up
+      rotatingWord.style.transform = "translateY(-100%)";
+
+      setTimeout(() => {
+        index = (index + 1) % words.length;
+        rotatingWord.textContent = words[index];
+
+        // Reset position below, then slide in
+        rotatingWord.style.transition = "none";
+        rotatingWord.style.transform = "translateY(100%)";
+
+        requestAnimationFrame(() => {
+          rotatingWord.style.transition = "transform 0.6s ease";
+          rotatingWord.style.transform = "translateY(0)";
+        });
+      }, 600); // matches CSS transition time
+    }
+
+    setInterval(changeWord, 2000); // change every 2s
+  </script>
+  <!-- Email Integration (Placeholder - Needs Backend/Secure Setup) -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      // NOTE: Remove or secure before production.
+      emailjs.init("w1T0X2nNp2hZMxJP1");
+    })();
+  </script>
+  <!--Email Status Updater-->
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm('eportfolio', 'eptemplate', this)
+        .then(function () {
+          document.getElementById('status').innerText = "Message sent successfully!";
+          e.target.reset();
+        }, function (error) {
+          document.getElementById('status').innerText = "Failed to send message. Please email me directly.";
+        });
+    });
+  </script>
 
 
 </body>
+
 </html>

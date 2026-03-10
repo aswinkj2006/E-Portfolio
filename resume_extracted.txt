@@ -1,0 +1,67 @@
+                                                        ASWIN K J
+                                                   AIML Undergraduate
+                 Email: aswinkj2006@gmail.com | Mobile: +91 9072239871 | LinkedIn | GitHub | Portfolio | Coimbatore, India
+
+SUMMARY
+AIML Undergraduate specializing in end-to-end ML pipelines, cloud infrastructure (Azure/Oracle Certified), and RESTful APIs.
+Multi-hackathon winner and strong algorithmic problem solver. Proficient in Python, Java, and TensorFlow. Proven leader in technical
+event management, seeking an AI/ML Engineering internship to architect scalable, production-ready AI systems.
+
+
+WORK EXPERIENCE
+AIML/DA Intern | LabMentix EdTech | Remote | July 2025 - Dec 2025 - Link
+     ●​ Engineered deep learning pipelines using TensorFlow and EfficientNetB0 transfer learning, integrating MLflow for rigorous MLOps
+        experiment tracking and hyperparameter versioning.
+     ●​ Architected and deployed real-time predictive analytics inference dashboards using Streamlit, seamlessly bridging backend
+        machine learning logic with interactive web applications.
+Full Stack Web Development Intern | Pantech Organization | Remote | Nov 2024 - Feb 2025 - Link
+     ●​ Developed and deployed a responsive, interactive web portfolio (Capstone) using HTML, CSS, and JavaScript, ensuring
+        cross-browser compatibility and optimized DOM manipulation.
+     ●​ Integrated AI-driven generative tools to accelerate UI/UX design workflows and streamline frontend asset generation.
+
+
+EDUCATION
+     ●​ B. TECH in ARTIFICIAL INTELLIGENCE & MACHINE LEARNING
+        CGPA : 9.24/10 ( Department 1st Rank ) | SNS College of Technology | Coimbatore, India | Present
+     ●​ HIGHER EDUCATION | Xth | XIIth
+        School Head Boy | The Oxford School | Trivandrum, India | March 2022 - March 2024
+
+
+ PROJECTS
+ ●​      V2C : Voice to Code AI Assistant | 1st Place, Hack Hive 2025 - Link
+          ○​   Architected a voice-to-code translation Flask backend with the Gemini API, optimizing natural language parsing for
+               low-latency, multi-language code generation.
+          ○​   Engineered a zero-click, voice-driven development state machine integrating the Web Speech API with custom audio
+               heuristics for visually impaired accessibility.
+          ○​   Automated repository provisioning and version control pipelines using the GitHub REST API for dynamic multi-file packaging
+ ●​      Exoplanet AI | NASA Space Apps Challenge - Link
+          ○​   Engineered a 5-model deep learning ensemble (CNN, LSTM, Bi-Attention, RF, Hybrid) achieving 94.1% accuracy and 97.8% AUC
+               on NASA Kepler/TESS photometry data.
+          ○​   Built a Flask inference backend with a time-series preprocessing pipeline, delivering sub-200ms predictions using 20+
+               extracted spectral features.
+          ○​   Developed a Plotly web dashboard for live light curve simulations, dynamic transit generation, and real-time model
+               comparisons.
+ ●​      DocSense AI | KPRIET DevSpark Hackathon - Link
+          ○​   Engineered a DeepSeek LLM hybrid pipeline auto-categorizing 9+ document types with heuristic fallback logic.
+          ○​   Built a spaCy NER and regex-driven PII redaction engine securing sensitive compliance data (Aadhaar, PAN, IFSC).
+          ○​   Designed a REST API integrating Tesseract OCR and LLM risk-scoring for contract evaluation and financial extraction.
+ ●​      STACS : Smart Timetable Automation | SIH 2025 - Link
+          ○​   Engineered a constraint-satisfaction timetable engine using Google OR-Tools to resolve multi-department scheduling
+               conflicts, optimizing both hard classroom limits and soft pedagogical preferences.
+          ○​   Architected a Flask REST API with an automated clash-detection workflow, generating 3 distinct optimal schedule
+               permutations per run while managing real-time cross-department substitutions.
+
+ SKILLS & LANGUAGES
+ ●​      Languages & Core CS: Python, Java, C, SQL, Data Structures & Algorithms (DSA), OOP
+ ●​      AI/ML Frameworks: TensorFlow, Scikit-Learn, MLflow, EfficientNetB0, Pandas, NumPy
+ ●​      Web & Cloud: Flask, Streamlit, HTML/CSS/JS, MS Azure (AI-900), Oracle Cloud (OCI)
+ ●​      Tools: Git/GitHub, Tableau, PowerBI
+ ●​      Leadership Roles : Dept. Coordinator - Texperia 2026 ( National Level Tech Symposium ) | Executive Member - IEEE, Gennuera
+
+ACHIEVEMENTS & CERTIFICATIONS
+●​     Certifications: Microsoft Azure AI Fundamentals ( AI-900 ), Oracle Certified AI Foundations Associate, NPTEL
+       Programming with Generative AI, AWS Job Simulation, NIT-T GenAI Workshop
+●​     Solved 200+ DSA Problems on Leetcode - Link
+●​     2x Winner @ SPARK Robotics Competition, ACE College of Engineering, Trivandrum
+●​     Winner of Codexia and CodeSprint Hackathons @ SNS Institutions.
+
