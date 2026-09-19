@@ -8,6 +8,7 @@ import {
   BrainCircuit,
   ExternalLink,
   Mail,
+  Phone,
   FileText,
   Award,
   GraduationCap,
@@ -685,6 +686,57 @@ export default function Home() {
             </div>
           </GlassCard>
         </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="relative py-28 px-4 md:px-12 max-w-4xl mx-auto w-full z-10 border-t border-[var(--gold-primary)]/20">
+        <div className="text-center mb-14 relative z-10">
+          <div className="w-[1px] h-16 bg-[var(--gold-primary)] opacity-40 mx-auto mb-6"></div>
+          <h2 className="text-4xl md:text-5xl font-[family-name:var(--font-cormorant)] font-light text-[var(--text-main)] mb-3">
+            Initiate Contact
+          </h2>
+          <p className="text-[var(--text-muted)] tracking-[0.25em] uppercase text-xs">
+            Open for AI Engineering Roles & Collaborations
+          </p>
+        </div>
+
+        <GlassCard delay={0.2} className="!p-8 md:!p-12 !rounded-none text-center border-t-2 border-[var(--gold-primary)]">
+          <p className="text-base md:text-lg text-[var(--text-muted)] mb-8 font-light max-w-xl mx-auto leading-relaxed">
+            Reach out directly for opportunities, technical discussions, or to review my complete credentials.
+          </p>
+
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            {/* Email Button */}
+            <a
+              href="mailto:aswinkj2006@gmail.com"
+              className="interactive inline-flex items-center gap-2.5 px-6 py-3.5 bg-[var(--navy-light)] border border-[var(--gold-primary)]/40 hover:border-[var(--gold-primary)] text-[var(--gold-light)] hover:bg-[var(--gold-primary)] hover:text-[var(--navy-bg)] text-xs md:text-sm tracking-wider uppercase transition-all duration-300 shadow-md font-medium"
+            >
+              <Mail size={16} />
+              <span>aswinkj2006@gmail.com</span>
+            </a>
+
+            {/* Call Button */}
+            <a
+              href="tel:+919072239871"
+              className="interactive inline-flex items-center gap-2.5 px-6 py-3.5 bg-[var(--navy-light)] border border-[var(--gold-primary)]/40 hover:border-[var(--gold-primary)] text-[var(--gold-light)] hover:bg-[var(--gold-primary)] hover:text-[var(--navy-bg)] text-xs md:text-sm tracking-wider uppercase transition-all duration-300 shadow-md font-medium"
+            >
+              <Phone size={16} />
+              <span>+91 9072239871</span>
+            </a>
+
+            {/* Resume Button */}
+            <a
+              href={resumeGitHubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="interactive inline-flex items-center gap-2.5 px-6 py-3.5 bg-[var(--gold-primary)] text-[var(--navy-bg)] hover:bg-[var(--gold-light)] text-xs md:text-sm tracking-wider uppercase transition-all duration-300 shadow-lg font-medium"
+            >
+              <FileText size={16} />
+              <span>Resume PDF</span>
+              <ExternalLink size={13} />
+            </a>
+          </div>
+        </GlassCard>
       </section>
 
       {/* Footer */}

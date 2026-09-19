@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FileText, ExternalLink, Menu, X } from 'lucide-react';
+import { Mail, Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,7 +20,7 @@ export default function Navbar() {
       }
 
       // Track active section
-      const sections = ['armory', 'chronicles', 'arsenal', 'honors'];
+      const sections = ['armory', 'chronicles', 'arsenal', 'honors', 'contact'];
       for (const sectionId of sections) {
         const el = document.getElementById(sectionId);
         if (el) {
@@ -91,17 +91,14 @@ export default function Navbar() {
               })}
             </nav>
 
-            {/* Resume Button & Mobile Toggle */}
+            {/* Contact Button & Mobile Toggle */}
             <div className="flex items-center gap-3">
               <a
-                href="https://github.com/aswinkj2006/E-Portfolio/blob/master/Aswin_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#contact"
                 className="interactive inline-flex items-center gap-1.5 px-3 py-1.5 bg-[var(--gold-primary)]/15 border border-[var(--gold-primary)]/60 text-[var(--gold-light)] hover:bg-[var(--gold-primary)] hover:text-[var(--navy-bg)] text-xs tracking-widest uppercase transition-all duration-300 font-medium shadow-sm"
               >
-                <FileText size={13} />
-                <span>Resume</span>
-                <ExternalLink size={11} className="opacity-70" />
+                <Mail size={13} />
+                <span>Contact</span>
               </a>
 
               {/* Mobile Menu Button */}
@@ -136,6 +133,13 @@ export default function Navbar() {
                     {link.label}
                   </a>
                 ))}
+                <a
+                  href="#contact"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="interactive text-sm uppercase tracking-widest py-2 text-[var(--gold-light)] hover:text-white transition-colors font-medium"
+                >
+                  Contact
+                </a>
               </motion.div>
             )}
           </AnimatePresence>
