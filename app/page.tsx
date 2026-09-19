@@ -2,6 +2,7 @@ import MatrixRain from '@/components/MatrixRain';
 import KintsugiBackground from '@/components/KintsugiBackground';
 import GlassCard from '@/components/GlassCard';
 import Navbar from '@/components/Navbar';
+import HeroSummary from '@/components/HeroSummary';
 import {
   Code2,
   Database,
@@ -38,7 +39,7 @@ function LinkedinIcon({ className = "w-4 h-4" }: { className?: string }) {
 }
 
 export default function Home() {
-  const resumeGitHubUrl = "https://github.com/aswinkj2006/E-Portfolio/blob/master/Aswin_Resume.pdf";
+  const resumePdfUrl = "/Aswin_Resume.pdf";
 
   return (
     <main className="relative min-h-screen text-[var(--text-main)] selection:bg-[var(--gold-dark)] selection:text-[var(--navy-bg)] bg-transparent">
@@ -56,13 +57,12 @@ export default function Home() {
             <span>AI Engineer • RAG & Agent Systems</span>
           </div>
 
-          <h1 className="text-6xl md:text-8xl lg:text-[9.5rem] font-[family-name:var(--font-cormorant)] font-light mb-6 text-[var(--gold-light)] leading-none tracking-tight">
+          <h1 className="text-6xl md:text-8xl lg:text-[9.5rem] font-[family-name:var(--font-cormorant)] font-light mb-4 text-[var(--gold-light)] leading-none tracking-tight">
             ASWIN K J
           </h1>
 
-          <p className="max-w-3xl text-base md:text-lg text-[var(--text-muted)] mb-8 font-light leading-relaxed">
-            AIML undergraduate specialising in LLMs and RAG-based agent systems, with hands-on experience designing and deploying production-ready AI apps; Azure and Oracle Cloud Certified. Grounded understanding of data structures and algorithms in Python, backed by wins at 2+ hackathons. Experienced in leading technical teams and organising large-scale events, coordinating 10+ member teams / 1000+ attendee events. Seeking an AI Engineering internship to build scalable, production-grade AI systems.
-          </p>
+          {/* Dynamic Rotating Highlights & Concise Summary */}
+          <HeroSummary />
 
           {/* Social & Contact Bar */}
           <div className="flex flex-wrap items-center justify-center gap-4 mb-10 text-xs tracking-wider uppercase">
@@ -92,13 +92,13 @@ export default function Home() {
               <span>aswinkj2006@gmail.com</span>
             </a>
             <a
-              href={resumeGitHubUrl}
+              href={resumePdfUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="interactive inline-flex items-center gap-2 px-4 py-2 bg-[var(--gold-primary)]/15 border border-[var(--gold-primary)]/60 text-[var(--gold-light)] hover:bg-[var(--gold-primary)] hover:text-[var(--navy-bg)] transition-all shadow-md font-medium"
             >
               <FileText size={15} />
-              <span>Resume PDF</span>
+              <span>Resume</span>
               <ExternalLink size={12} className="opacity-70" />
             </a>
           </div>
@@ -726,13 +726,13 @@ export default function Home() {
 
             {/* Resume Button */}
             <a
-              href={resumeGitHubUrl}
+              href={resumePdfUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="interactive inline-flex items-center gap-2.5 px-6 py-3.5 bg-[var(--gold-primary)] text-[var(--navy-bg)] hover:bg-[var(--gold-light)] text-xs md:text-sm tracking-wider uppercase transition-all duration-300 shadow-lg font-medium"
             >
               <FileText size={16} />
-              <span>Resume PDF</span>
+              <span>Resume</span>
               <ExternalLink size={13} />
             </a>
           </div>
@@ -749,10 +749,10 @@ export default function Home() {
             <span>•</span>
             <a href="mailto:aswinkj2006@gmail.com" className="hover:text-[var(--gold-light)] transition-colors">Email</a>
             <span>•</span>
-            <a href={resumeGitHubUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--gold-light)] transition-colors">Resume</a>
+            <a href={resumePdfUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--gold-light)] transition-colors">Resume</a>
           </div>
           <p className="font-[family-name:var(--font-inter)] tracking-[0.2em] uppercase font-light text-[11px]">
-            © 2026 ASWIN K J • Coimbatore, India • All rights reserved.
+            © 2026 ASWIN K J.
           </p>
         </div>
       </footer>

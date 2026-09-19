@@ -3,10 +3,17 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 export default function CursorLight() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [mousePosition, setMousePosition] = useState({ x: -100, y: -100 });
   const [isHovering, setIsHovering] = useState(false);
+  const [isTouch, setIsTouch] = useState(true);
 
   useEffect(() => {
+    // Disable on touch devices to conserve mobile performance
+    if (window.matchMedia('(pointer: coarse)').matches) {
+      return;
+    }
+    setIsTouch(false);
+
     const updateMousePosition = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
@@ -26,14 +33,16 @@ export default function CursorLight() {
       }
     };
 
-    window.addEventListener('mousemove', updateMousePosition);
-    window.addEventListener('mouseover', handleMouseOver);
+    window.addEventListener('mousemove', updateMousePosition, { passive: true });
+    window.addEventListener('mouseover', handleMouseOver, { passive: true });
 
     return () => {
       window.removeEventListener('mousemove', updateMousePosition);
       window.removeEventListener('mouseover', handleMouseOver);
     };
   }, []);
+
+  if (isTouch) return null;
 
   return (
     <motion.div
@@ -45,9 +54,9 @@ export default function CursorLight() {
       }}
       transition={{
         type: 'spring',
-        stiffness: 500,
-        damping: 30,
-        mass: 0.2,
+        stiffness: 600,
+        damping: 35,
+        mass: 0.15,
       }}
     />
   );

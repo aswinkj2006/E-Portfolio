@@ -60,7 +60,6 @@ export default function Navbar() {
               href="#hero"
               className="interactive font-[family-name:var(--font-cormorant)] text-xl font-medium tracking-wider text-[var(--gold-light)] hover:text-white transition-colors flex items-center gap-2.5"
             >
-              <span className="w-2 h-2 rounded-full bg-[var(--gold-primary)] animate-pulse" />
               <span>ASWIN K J</span>
             </a>
 
@@ -72,11 +71,10 @@ export default function Navbar() {
                   <a
                     key={link.id}
                     href={link.href}
-                    className={`interactive relative py-1 transition-colors ${
-                      isActive
-                        ? 'text-[var(--gold-light)] font-medium'
-                        : 'text-[var(--text-muted)] hover:text-[var(--gold-light)]'
-                    }`}
+                    className={`interactive relative py-1 transition-colors ${isActive
+                      ? 'text-[var(--gold-light)] font-medium'
+                      : 'text-[var(--text-muted)] hover:text-[var(--gold-light)]'
+                      }`}
                   >
                     {link.label}
                     {isActive && (

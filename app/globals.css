@@ -38,8 +38,9 @@ body {
 /* Glassmorphism Panel with High Contrast & Layered Shadow */
 .minimal-panel {
   background: rgba(7, 12, 24, 0.88); /* Increased opacity for sharp text readability */
-  backdrop-filter: blur(28px) saturate(140%);
-  -webkit-backdrop-filter: blur(28px) saturate(140%);
+  backdrop-filter: blur(12px) saturate(130%);
+  -webkit-backdrop-filter: blur(12px) saturate(130%);
+  transform: translateZ(0); /* Hardware accelerated compositing */
   border: 1px solid rgba(255, 255, 255, 0.09);
   border-top: 1px solid rgba(255, 255, 255, 0.18); /* Edge highlight */
   border-left: 1px solid rgba(255, 255, 255, 0.14); /* Edge highlight */
@@ -47,7 +48,7 @@ body {
     0 20px 50px -10px rgba(0, 0, 0, 0.85),
     0 0 0 1px rgba(255, 255, 255, 0.05) inset,
     0 1px 2px rgba(255, 255, 255, 0.1) inset;
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .minimal-panel:hover {
   border-color: rgba(197, 160, 89, 0.55);

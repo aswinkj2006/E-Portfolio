@@ -11,57 +11,68 @@ export default function MatrixRain() {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d', { alpha: true });
     if (!ctx) return;
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // Greek Alphabet and Stoic-like characters
     const greekLetters = 'ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρστυφχψω';
     const letters = greekLetters.split('');
 
     const fontSize = 14;
-    let columns = canvas.width / fontSize;
-    let drops: number[] = [];
-    for (let x = 0; x < columns; x++) {
-      drops[x] = 1;
-    }
+    let columns = Math.floor(canvas.width / fontSize);
+    let drops: number[] = new Array(columns).fill(1);
 
-    const draw = () => {
-      // Dark background fade for the trail effect
-      ctx.fillStyle = 'rgba(4, 8, 20, 0.1)'; 
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    let animationFrameId: number;
+    let lastTime = 0;
+    const interval = 60; // ~16 FPS is ideal for stylized matrix rain while saving CPU/GPU
 
-      ctx.fillStyle = 'rgba(197, 160, 89, 0.3)'; // Muted Gold color
-      ctx.font = fontSize + 'px "Cormorant Garamond", serif';
-
-      for (let i = 0; i < drops.length; i++) {
-        const text = letters[Math.floor(Math.random() * letters.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-          drops[i] = 0;
-        }
-        drops[i]++;
+    const draw = (time: number) => {
+      // Pause completely if scrolled down to save CPU and battery
+      if (window.scrollY > 600) {
+        animationFrameId = requestAnimationFrame(draw);
+        return;
       }
+
+      if (time - lastTime > interval) {
+        lastTime = time;
+
+        // Dark background fade for the trail effect
+        ctx.fillStyle = 'rgba(4, 8, 20, 0.12)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = 'rgba(197, 160, 89, 0.35)';
+        ctx.font = `${fontSize}px "Cormorant Garamond", serif`;
+
+        for (let i = 0; i < drops.length; i++) {
+          const text = letters[Math.floor(Math.random() * letters.length)];
+          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            drops[i] = 0;
+          }
+          drops[i]++;
+        }
+      }
+
+      animationFrameId = requestAnimationFrame(draw);
     };
 
-    const interval = setInterval(draw, 50);
+    animationFrameId = requestAnimationFrame(draw);
 
     const handleResize = () => {
+      if (!canvas) return;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      columns = canvas.width / fontSize;
-      drops = [];
-      for (let x = 0; x < columns; x++) {
-        drops[x] = 1;
-      }
+      columns = Math.floor(canvas.width / fontSize);
+      drops = new Array(columns).fill(1);
     };
-    window.addEventListener('resize', handleResize);
+
+    window.addEventListener('resize', handleResize, { passive: true });
 
     return () => {
-      clearInterval(interval);
+      cancelAnimationFrame(animationFrameId);
       window.removeEventListener('resize', handleResize);
     };
   }, []);
@@ -69,13 +80,13 @@ export default function MatrixRain() {
   return (
     <motion.canvas
       ref={canvasRef}
-      style={{ 
-        position: 'fixed', 
-        top: 0, 
-        left: 0, 
-        zIndex: -1, 
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        zIndex: -1,
         opacity,
-        pointerEvents: 'none' 
+        pointerEvents: 'none',
       }}
     />
   );
